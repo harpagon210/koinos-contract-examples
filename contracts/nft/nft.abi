@@ -1,0 +1,76 @@
+{
+   "methods" : {
+      "name": {
+         "argument"    : "nft.name_arguments",
+         "return"      : "nft.name_result",
+         "entry_point" : "0x01",
+         "description" : "Returns the token's name",
+         "read-only"   : true
+      },
+      "symbol": {
+         "argument"    : "nft.symbol_arguments",
+         "return"      : "nft.symbol_result",
+         "entry_point" : "0x02",
+         "description" : "Returns the token's symbol",
+         "read-only"   : true
+      },
+      "balance_of": {
+         "argument"    : "nft.balance_of_arguments",
+         "return"      : "nft.balance_of_result",
+         "entry_point" : "0x03",
+         "description" : "Get the balance of an owner",
+         "read-only"   : true
+      },
+      "owner_of": {
+         "argument"    : "nft.owner_of_arguments",
+         "return"      : "nft.owner_of_result",
+         "entry_point" : "0x04",
+         "description" : "Get the owner of a token",
+         "read-only"   : true
+      },
+      "mint": {
+         "argument"    : "nft.mint_arguments",
+         "return"      : "nft.mint_result",
+         "entry_point" : "0x05",
+         "description" : "Mint a new token",
+         "read-only"   : false
+      },
+      "transfer": {
+         "argument"    : "nft.transfer_arguments",
+         "return"      : "nft.transfer_result",
+         "entry_point" : "0x06",
+         "description" : "Transfer a token",
+         "read-only"   : false
+      },
+      "approve": {
+         "argument"    : "nft.approve_arguments",
+         "return"      : "nft.approve_result",
+         "entry_point" : "0x07",
+         "description" : "Approve an address to transfer a token",
+         "read-only"   : false
+      },
+      "set_approval_for_all": {
+         "argument"    : "nft.set_approval_for_all_arguments",
+         "return"      : "nft.set_approval_for_all_result",
+         "entry_point" : "0x08",
+         "description" : "Approve or revoke an address to operate on all tokens owned by caller",
+         "read-only"   : false
+      },
+      "get_approved": {
+         "argument"    : "nft.get_approved_arguments",
+         "return"      : "nft.get_approved_result",
+         "entry_point" : "0x09",
+         "description" : "Get approved address for a token",
+         "read-only"   : true
+      }
+      ,
+      "is_approved_for_all": {
+         "argument"    : "nft.is_approved_for_all_arguments",
+         "return"      : "nft.is_approved_for_all_result",
+         "entry_point" : "0x0A",
+         "description" : "Check if an operator is approved by an owner",
+         "read-only"   : true
+      }
+   },
+   "types" : "CqALCgluZnQucHJvdG8SA25mdBoUa29pbm9zL29wdGlvbnMucHJvdG8iEAoObmFtZV9hcmd1bWVudHMiIwoLbmFtZV9yZXN1bHQSFAoFdmFsdWUYASABKAlSBXZhbHVlIhIKEHN5bWJvbF9hcmd1bWVudHMiJQoNc3ltYm9sX3Jlc3VsdBIUCgV2YWx1ZRgBIAEoCVIFdmFsdWUiMgoUYmFsYW5jZV9vZl9hcmd1bWVudHMSGgoFb3duZXIYASABKAxCBIC1GAZSBW93bmVyIi0KEWJhbGFuY2Vfb2ZfcmVzdWx0EhgKBXZhbHVlGAEgASgEQgIwAVIFdmFsdWUiMwoSb3duZXJfb2ZfYXJndW1lbnRzEh0KCHRva2VuX2lkGAEgASgEQgIwAVIHdG9rZW5JZCItCg9vd25lcl9vZl9yZXN1bHQSGgoFdmFsdWUYASABKAxCBIC1GAZSBXZhbHVlIjcKFmdldF9hcHByb3ZlZF9hcmd1bWVudHMSHQoIdG9rZW5faWQYASABKARCAjABUgd0b2tlbklkIjEKE2dldF9hcHByb3ZlZF9yZXN1bHQSGgoFdmFsdWUYASABKAxCBIC1GAZSBXZhbHVlIlsKHWlzX2FwcHJvdmVkX2Zvcl9hbGxfYXJndW1lbnRzEhoKBW93bmVyGAEgASgMQgSAtRgGUgVvd25lchIeCgdhZGRyZXNzGAIgASgMQgSAtRgGUgdhZGRyZXNzIjIKGmlzX2FwcHJvdmVkX2Zvcl9hbGxfcmVzdWx0EhQKBXZhbHVlGAEgASgIUgV2YWx1ZSJFCg5taW50X2FyZ3VtZW50cxIUCgJ0bxgBIAEoDEIEgLUYBlICdG8SHQoIdG9rZW5faWQYAiABKARCAjABUgd0b2tlbklkIiMKC21pbnRfcmVzdWx0EhQKBXZhbHVlGAEgASgIUgV2YWx1ZSJjChJ0cmFuc2Zlcl9hcmd1bWVudHMSGAoEZnJvbRgBIAEoDEIEgLUYBlIEZnJvbRIUCgJ0bxgCIAEoDEIEgLUYBlICdG8SHQoIdG9rZW5faWQYAyABKARCAjABUgd0b2tlbklkIicKD3RyYW5zZmVyX3Jlc3VsdBIUCgV2YWx1ZRgBIAEoCFIFdmFsdWUieQoRYXBwcm92ZV9hcmd1bWVudHMSLwoQYXBwcm92ZXJfYWRkcmVzcxgBIAEoDEIEgLUYBlIPYXBwcm92ZXJBZGRyZXNzEhQKAnRvGAIgASgMQgSAtRgGUgJ0bxIdCgh0b2tlbl9pZBgDIAEoBEICMAFSB3Rva2VuSWQiJgoOYXBwcm92ZV9yZXN1bHQSFAoFdmFsdWUYASABKAhSBXZhbHVlIp4BCh5zZXRfYXBwcm92YWxfZm9yX2FsbF9hcmd1bWVudHMSLwoQYXBwcm92ZXJfYWRkcmVzcxgBIAEoDEIEgLUYBlIPYXBwcm92ZXJBZGRyZXNzEi8KEG9wZXJhdG9yX2FkZHJlc3MYAiABKAxCBIC1GAZSD29wZXJhdG9yQWRkcmVzcxIaCghhcHByb3ZlZBgDIAEoCFIIYXBwcm92ZWQiMwobc2V0X2FwcHJvdmFsX2Zvcl9hbGxfcmVzdWx0EhQKBXZhbHVlGAEgASgIUgV2YWx1ZSIqCgx0b2tlbl9vYmplY3QSGgoFb3duZXIYASABKAxCBIC1GAZSBW93bmVyIioKDmJhbGFuY2Vfb2JqZWN0EhgKBXZhbHVlGAEgASgEQgIwAVIFdmFsdWUiNwoVdG9rZW5fYXBwcm92YWxfb2JqZWN0Eh4KB2FkZHJlc3MYASABKAxCBIC1GAZSB2FkZHJlc3MiNgoYb3BlcmF0b3JfYXBwcm92YWxfb2JqZWN0EhoKCGFwcHJvdmVkGAEgASgIUghhcHByb3ZlZGIGcHJvdG8z"
+}

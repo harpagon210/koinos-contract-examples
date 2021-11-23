@@ -1,0 +1,109 @@
+syntax = "proto3";
+
+package nft;
+
+import "koinos/options.proto";
+
+message name_arguments {
+
+}
+
+message name_result {
+   string value = 1;
+}
+
+message symbol_arguments {
+
+}
+
+message symbol_result {
+   string value = 1;
+}
+
+message balance_of_arguments {
+   bytes owner = 1 [(koinos.koinos_bytes_type) = ADDRESS];
+}
+
+message balance_of_result {
+   uint64 value = 1 [jstype = JS_STRING];
+}
+
+message owner_of_arguments {
+   uint64 token_id = 1 [jstype = JS_STRING];
+}
+
+message owner_of_result {
+   bytes value = 1 [(koinos.koinos_bytes_type) = ADDRESS];
+}
+
+message get_approved_arguments {
+   uint64 token_id = 1 [jstype = JS_STRING];
+}
+
+message get_approved_result {
+   bytes value = 1 [(koinos.koinos_bytes_type) = ADDRESS];
+}
+
+message is_approved_for_all_arguments {
+   bytes owner = 1 [(koinos.koinos_bytes_type) = ADDRESS];
+   bytes address = 2 [(koinos.koinos_bytes_type) = ADDRESS];
+}
+
+message is_approved_for_all_result {
+   bool value = 1;
+}
+
+message mint_arguments {
+   bytes to = 1 [(koinos.koinos_bytes_type) = ADDRESS];
+   uint64 token_id = 2 [jstype = JS_STRING];
+}
+
+message mint_result {
+   bool value = 1;
+}
+
+message transfer_arguments {
+   bytes from = 1 [(koinos.koinos_bytes_type) = ADDRESS];
+   bytes to = 2 [(koinos.koinos_bytes_type) = ADDRESS];
+   uint64 token_id = 3 [jstype = JS_STRING];
+}
+
+message transfer_result {
+   bool value = 1;
+}
+
+message approve_arguments {
+   bytes approver_address = 1 [(koinos.koinos_bytes_type) = ADDRESS];
+   bytes to = 2 [(koinos.koinos_bytes_type) = ADDRESS];
+   uint64 token_id = 3 [jstype = JS_STRING];
+}
+
+message approve_result {
+   bool value = 1;
+}
+
+message set_approval_for_all_arguments {
+   bytes approver_address = 1 [(koinos.koinos_bytes_type) = ADDRESS];
+   bytes operator_address = 2 [(koinos.koinos_bytes_type) = ADDRESS];
+   bool approved = 3;
+}
+
+message set_approval_for_all_result {
+   bool value = 1;
+}
+
+message token_object {
+   bytes owner = 1 [(koinos.koinos_bytes_type) = ADDRESS];
+}
+
+message balance_object {
+   uint64 value = 1 [jstype = JS_STRING];
+}
+
+message token_approval_object {
+   bytes address = 1 [(koinos.koinos_bytes_type) = ADDRESS];
+}
+
+message operator_approval_object {
+   bool approved = 1;
+}
